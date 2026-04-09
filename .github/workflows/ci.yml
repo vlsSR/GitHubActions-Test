@@ -1,0 +1,25 @@
+name: Inegración Continua Java
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Descargar el codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar el entorno de java JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: 3. Ejecutar las pruebas unitarias con Maven
+        run: mvn test
+        working-directory: ./victor-ic
