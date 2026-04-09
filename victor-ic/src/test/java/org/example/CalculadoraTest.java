@@ -38,6 +38,6 @@ public class CalculadoraTest
 
     public void testRestar()
     {
-        assertEquals(1, Calcuadora.sumar(3,2));
+        assertEquals(1, Calcuadora.restar(3,2));
     }
 }
