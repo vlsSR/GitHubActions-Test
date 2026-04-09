@@ -35,4 +35,9 @@ public class CalculadoraTest
     {
         assertEquals(5, Calcuadora.sumar(3,2));
     }
+
+    public void testRestar()
+    {
+        assertEquals(1, Calcuadora.sumar(3,2));
+    }
 }
